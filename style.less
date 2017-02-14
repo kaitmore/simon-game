@@ -1,0 +1,210 @@
+@red: #F93B47;
+@blue: #317FEE;
+@yellow: #FFCE44;
+@green: #13BA6A;
+@redhighlight: #ff878e;
+@yellowhighlight: #ffe291;
+@bluehighlight: #8cbaff;
+@greenhighlight: #00ed7b;
+
+body {
+  background: #f0f0f0;
+  font-size: 28px;
+  font-family: 'Archivo Black', sans-serif;
+  color: #000;
+}
+h1{
+  font-size: 60px;
+}
+.header{
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: 25px 0 0 10px;
+  padding: 20px;
+ border-radius: 10%;
+}
+.modes{
+  font-size: 22px;
+   margin-right: 80px;
+  cursor: pointer;
+  
+}
+.game {
+  margin: 200px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+figure {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  margin: 40px auto;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 6px 1px #000;
+  transform: rotate(45deg) scale(2.2, 2.2)
+}
+
+.color {
+  width: 123px;
+  height: 125px;
+  position: relative;
+  float: left;
+  background: #000;
+  transform-origin: 100% 100%;
+  box-shadow: inset 0 0 1px 0px rgb(187, 187, 187);
+  background: @green;
+  cursor: pointer;
+}
+
+.color:nth-of-type(2) {
+  right: 0;
+  background: @red;
+}
+
+.color:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+  background: @yellow;
+}
+
+.color:last-of-type {
+  right: 0;
+  bottom: 0;
+  background: @blue;
+}
+
+.greenHighlight {
+  width: 123px;
+  height: 125px;
+  position: relative;
+  float: left;
+  background: #000;
+  transform-origin: 100% 100%;
+  transition:  .3s ease;
+  box-shadow: inset 0 0 1px 0px rgb(187, 187, 187);
+  background: @greenhighlight;
+  cursor: pointer;
+}
+
+.redHighlight:nth-of-type(2) {
+  right: 0;
+  background: @redhighlight;
+}
+
+.yellowHighlight:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+  background: @yellowhighlight;
+}
+
+.blueHighlight:last-of-type {
+  right: 0;
+  bottom: 0;
+  background: @bluehighlight;
+}
+.info  {
+  box-shadow: 0 0 11px 2px #000, 0 0 0px 32px rgba(255, 255, 255, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  line-height: 90px;
+  margin: -50px 0 0 -50px;
+  border: 4px solid white;
+  transform: rotate(-45deg);
+  background: #fff;
+  
+}
+
+#start {
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+}
+
+#no {
+  padding-top: 25px;
+  line-height: 20px;
+  font-size: 20px;
+  display: block;
+}
+
+// Slider styling from w3
+// The box around the slider
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  margin: 10px;
+}
+
+.strict {
+  margin-left: 70px;
+}
+
+
+// Hide HTML checkbox
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+// Round sliders
+
+.slider.round {
+  border-radius: 22px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
